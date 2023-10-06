@@ -31,6 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
           );
         });
             console.log(filteredMovies);
+
+            container.innerHTML = ""
+
+            // AGREGAR ACA FUNCION PARA MOSTRAR LAS PELICULAS
       }
   
       
