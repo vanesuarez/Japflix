@@ -20,70 +20,25 @@ document.addEventListener("DOMContentLoaded", () => {
       const searchedMovie = userInput.value.toLowerCase()
 
       if (searchedMovie) {
-
-          const searchFilter = movies.filter(function (movie) {
-              return (
-                movie.title.toLowerCase().includes(searchedMovie) ||   
-                movie.tagline.toLowerCase().includes(searchedMovie) ||
-                movie.overview.toLowerCase().includes(searchedMovie)
-              );
-            });
-            console.log(searchFilter);
-
+        const filteredMovies = movies.filter(function (movie) {
+          // Utilizar el método some para buscar en los géneros de cada película
+          return (
+            movie.title.toLowerCase().includes(searchedMovie) ||
+            movie.tagline.toLowerCase().includes(searchedMovie) ||
+            movie.overview.toLowerCase().includes(searchedMovie) ||
+            movie.genres.some((genre) => genre.name.toLowerCase().includes(searchedMovie)
+            )
+          );
+        });
+            console.log(filteredMovies);
       }
   
       
     });
   });
-  
-
-
-
-        
-      
-        // console.log(searchFilter);
-
-        //  container.innerHTML = "";
-
-
-    // GUARDAR VARIABLE DE LA DATA DEL ARRAY DE MODO GLOBAL
-    // USAR METODO INCLUDES EN EL IF CON TO UPERCASE O TOLOWERCASE
-    // USAR METODO EVERY PARA RECORRER EL ARRAY GENRE
 
 
 
 
-    
 
-// async function fetchData() {
-//     let result = [];
-//     try {
-//       const response = await fetch(url);
-//       result = await response.json();
-//     } catch (error) {
-//       alert(error);
-//     }
-//     return result;
-//   }
 
-//   async function showMovies() {
-//     try {
-//         let movies = await fetchData();
-//         const list = document.getElementById("lista");
-//         list.innerHTML = "";
-
-//         // const searchedMovies = [];
-//         // movies.forEach((movie) => {
-//         //   if (movies.title === userInput || movies.genre === userInput || movies. ) {
-//         //     list.innerHTML += `<li>${product.title}: $${product.price}</li>`;
-//         //     // El método push agrega un elemento al final del array
-//         //     filteredProducts.push(product);
-//         //   }
-//         // });
-
-//     }
-
-//     catch (error) {
-//     console.log(error);
-//   }
-// }
