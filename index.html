@@ -13,6 +13,7 @@
 </head>
 
 <body class="bg-dark">
+
   <main>
     <div class="text-center container">
       <div class="row py-lg-3">
@@ -26,23 +27,26 @@
 
     <div class="album">
       <ul class="list-group container" id="lista">
-        <li class="list-group-item d-flex justify-content-between bg-dark text-white" type="button">
-          <div class="p-2 bd-highlight">
-          <h5> Titulo de la Pelicula</h5>
-          <p> Descripción</p>
-          </div>
-          <div class="ms-auto p-2 bd-highlight">
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-          <span class="fa fa-star"></span>
-        </div>
-        </li>
       </ul>
     </div>
   </main>
 
+  <!-- Boton -->
+  <div id="listdrop">
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasTopLabel">title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <p id="overviewM">overview</p> 
+        <hr>
+        <p id="genresM">genres</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Boton -->  
   <footer class="text-muted py-3">
     <div class="container">
       <p class="float-end mb-1">
@@ -57,7 +61,5 @@
   <script src="js/bootstrap.bundle.min.js"></script>
 
   <script src="js/script.js"></script>
-
 </body>
-
 </html>
