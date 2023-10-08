@@ -49,7 +49,7 @@ function movieslist(array){
           }
       }
       conteiner.innerHTML +=`
-      <li class="list-group-item d-flex justify-content-between bg-dark text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" onclick=info(${element.id})>
+      <li class="list-group-item d-flex justify-content-between bg-dark text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" onclick=infomovies(${element.id})>
       <div class="p-2 bd-highlight">
           <h5>${element.title}</h5>
           <p>${element.tagline}</p>
@@ -75,8 +75,8 @@ function infomovies(id) {
 
   let moviesinfo = {};
   filteredMovies.forEach((element) => {
-    if (element.id==id) { 
-      moviesinfo=element; 
+    if (element.id==id){
+      moviesinfo=element;
     }
   });
 
