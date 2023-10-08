@@ -75,8 +75,8 @@ function infomovies(id) {
 
   let moviesinfo = {};
   filteredMovies.forEach((element) => {
-    if (element.id == id) { 
-      moviesinfo = element; 
+    if (element.id==id) { 
+      moviesinfo=element; 
     }
   });
 
@@ -85,7 +85,7 @@ function infomovies(id) {
   offcanvas.innerHTML = '';
   listdrop.innerHTML = '';
 
-  for (let i = 0; i < moviesinfo.genres.length; i++) {
+  for (let i = 0; i<moviesinfo.genres.length; i++){
     offcanvas.innerHTML += `
         <p class="text-secondary">- ${moviesinfo.genres[i].name} -</p>
         `;
@@ -98,9 +98,3 @@ function infomovies(id) {
         <li class="d-flex justify-content-between"><p>Revenue:</p><p>${moviesinfo.revenue}</p></li>
     `;
 }
-
-
-
-
-
-
