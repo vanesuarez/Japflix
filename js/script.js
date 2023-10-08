@@ -41,6 +41,37 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Parte 3 y 4
+  function infomovies(id){
+    const titlemovie = document.getElementById('titlemovie');
+    const paramovie = document.getElementById('paramovie');
+    const offcanvas = document.getElementById('offcanvas-body');
+    const listdrop = document.getElementById('listdrop');
+
+    let moviesinfo = {};
+    filteredMovies.forEach((element) => {
+        if(element.id==id){moviesinfo=element}
+    });
+
+    titlemovie.innerHTML = `${moviesinfo.title}`;
+    paramovie.innerHTML = `${moviesinfo.overview}`;
+    offcanvas.innerHTML = '';
+    listdrop.innerHTML = '';
+
+    for(let i=0; i<moviesinfo.genres.length; i++){
+      offcanvas.innerHTML += `
+        <p class="text-secondary">- ${moviesinfo.genres[u].name} -</p>
+        `;
+    }
+
+    listdrop.innerHTML += `
+        <li class="d-flex justify-content-between"><p>Year:</p><p>${moviesinfo.release_date.slice(0,4)}</p></li>
+        <li class="d-flex justify-content-between"><p>Runtime:</p><p>${moviesinfo.runtime} mins</p></li>
+        <li class="d-flex justify-content-between"><p>Budget:</p><p>${moviesinfo.budget}</p></li>
+        <li class="d-flex justify-content-between"><p>Revenue:</p><p>${moviesinfo.revenue}</p></li>
+    `;
+}
+
 
 
 
