@@ -15,17 +15,18 @@
 <body class="bg-dark">
   
   <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-    <div class="offcanvas-header">
-      <h3 class="offcanvas-title" id="titlemovie"></h3>
+    <div class="offcanvas-body">
+      <h3 id="titlemovie"></h3>
       <p id="paramovie"></p>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <div class="d-flex justify-content-between">
+        <div id="offcanvas-body" class="d-flex justify-content-between"></div>
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          More
+        </button>
+        <ul class="dropdown-menu px-1" tabindex="1" id="listdrop">
+        </ul>
+      </div>
     </div>
-    <div class="offcanvas-body" id="offcanvas-body"></div>
-    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      More
-    </button>
-    <ul class="dropdown-menu" id="listdrop">
-    </ul>
   </div>
 
   <main>
@@ -41,19 +42,6 @@
 
     <div class="album">
       <ul class="list-group container" id="lista">
-        <li class="list-group-item d-flex justify-content-between bg-dark text-white" type="button">
-          <div class="p-2 bd-highlight">
-          <h5> Titulo de la Pelicula</h5>
-          <p> Descripción</p>
-          </div>
-          <div class="ms-auto p-2 bd-highlight">
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-          <span class="fa fa-star"></span>
-        </div>
-        </li>
       </ul>
     </div>
   </main>
