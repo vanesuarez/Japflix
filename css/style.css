@@ -26,3 +26,12 @@ main {
 .offcanvas-top{
     height: fit-content;
 }
+
+h5 {
+    text-align: left;
+}
+
+.dropdown {
+    text-align: right;
+    position: inherit;
+}
